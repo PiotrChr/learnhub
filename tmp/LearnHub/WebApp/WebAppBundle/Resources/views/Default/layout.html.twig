@@ -1,0 +1,25 @@
+{% extends 'AvanzuAdminThemeBundle:layout:base-layout.html.twig' %}
+
+{% block avanzu_admin_header %}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/fonts/proxima_nova.css')}}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}" />
+{% endblock %}
+{% block title %}
+    {{ 'projectTitle'|trans|capitalize }} - {% block pageTitle %}{% endblock %}
+{% endblock %}
+
+{% block page_content %}
+    {% block content %}{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js') }}"></script>
+    <script src="{{ asset('ng_app/app.module.js') }}"></script>
+    <script src="{{ asset('ng_app/directives/global.directive.js') }}"></script>
+    <script src="{{ asset('ng_app/directives/clickoutside.directive.js') }}"></script>
+    <script src="{{ asset('ng_app/shared/hub/search.box.js') }}"></script>
+{% endblock %}

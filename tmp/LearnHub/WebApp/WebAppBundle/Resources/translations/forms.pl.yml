@@ -1,0 +1,7 @@
+forms.password: hasło
+forms.repeatPassword: powtórz hasło
+forms.username: nazwa użytkownika
+forms.captcha: captcha
+forms.register: rejestruj
+forms.login: zaloguj
+forms.loginRemember: pamiętaj mnie

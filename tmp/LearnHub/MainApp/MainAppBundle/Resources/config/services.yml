@@ -1,0 +1,4 @@
+services:
+#    main_app.example:
+#        class: LearnHub\MainApp\MainAppBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

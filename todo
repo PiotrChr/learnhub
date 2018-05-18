@@ -1,0 +1,27 @@
+TODO fos user bundle:
+    https://www.youtube.com/watch?v=D6wFEMKDNxQ
+    https://www.youtube.com/watch?v=BFGWJEVS7Bc
+    http://symfony.com/doc/current/bundles/FOSUserBundle/index.html
+
+TODO hub entities:
+
+TODO mailer activation:
+    http://symfony.com/doc/current/cookbook/email/email.html
+    http://symfony.com/doc/current/reference/configuration/swiftmailer.html
+    https://www.youtube.com/watch?v=DqUZHQn--y0
+TODO create services:
+
+TODO - MAKE SURE FUNCTIONALITY LIES IN MainAppBundle!!!
+
+TODO - create GIT repository:
+
+TODO - project template:
+    free and clean: https://github.com/almasaeed2010/AdminLTE
+TODO - templates:
+    registration:
+        http://htmlstream.com/preview/unify-v1.9.4/page_registration1.html
+        http://htmlstream.com/preview/unify-v1.9.4/page_login_and_registration.html
+    accordion:
+        http://wrapbootstrap.com/preview/WB0048JF7
+
+gmaitodo: approve, disapprove

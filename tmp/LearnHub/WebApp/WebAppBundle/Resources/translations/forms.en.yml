@@ -1,0 +1,81 @@
+forms.password: password
+forms.repeatPassword: Repeat password
+forms.captcha: captcha
+forms.username: username
+forms.register: sign up
+forms.login: sign in
+forms.loginRemember: remember me
+forms.addSource: add resource
+forms.source: resource url
+forms.chooseCategory: relevant to
+forms.sourceName: resource name/topic
+forms.chooseTag: Tag it!
+
+
+category.acoustics: acoustics
+category.aeronautics: aeronautics
+category.agronomy: agronomy
+category.anatomy: anatomy
+category.anthropology: anthropology
+category.archaeology: archaeology
+category.astronomy: astronomy
+category.astrophysics: astrophysics
+category.bacteriology: bacteriology
+category.biochemistry: biochemistry
+category.biology: biology
+category.botany: botany
+category.cardiology: cardiology
+category.cartography: cartography
+category.chemistry: chemistry
+category.cosmology: cosmology
+category.crystallography: crystallography
+category.ecology: ecology
+category.embryology: embryology
+category.endocrinology: endocrinology
+category.entomology: entomology
+category.enzymology: enzymology
+category.forestry: forestry
+category.gelotology: gelotology
+category.genetics: genetics
+category.geochemistry: geochemistry
+category.geodesy: geodesy
+category.geography: geography
+category.geology: geology
+category.geophysics: geophysics
+category.hematology: hematology
+category.histology: histology
+category.horology: horology
+category.hydrology: hydrology
+category.ichthyology: ichthyology
+category.immunology: immunology
+category.linguistics: linguistics
+category.mechanics: mechanics
+category.medicine: medicine
+category.meteorology: meteorology
+category.metrology: metrology
+category.microbiology: microbiology
+category.mineralogy: mineralogy
+category.mycology: mycology
+category.neurology: neurology
+category.nucleonics: nucleonics
+category.nutrition: nutrition
+category.oceanography: oceanography
+category.oncology: oncology
+category.optics: optics
+category.paleontology: paleontology
+category.pathology: pathology
+category.petrology: petrology
+category.pharmacology: pharmacology
+category.physics: physics
+category.physiology: physiology
+category.psychology: psychology
+category.radiology: radiology
+category.robotics: robotics
+category.seismology: seismology
+category.spectroscopy: spectroscopy
+category.systematics: systematics
+category.thermodynamics: thermodynamics
+category.toxicology: toxicology
+category.virology: virology
+category.volcanology: volcanology
+category.zoology: zoology

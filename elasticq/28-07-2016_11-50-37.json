@@ -1,0 +1,152 @@
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 4,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "learnhub",
+      "_type" : "article",
+      "_id" : "22",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 22,
+        "name" : "Some title 2",
+        "author" : {
+          "id" : 20
+        },
+        "category" : [ {
+          "id" : 1303,
+          "i18n_title" : "category.biology"
+        }, {
+          "id" : 1355,
+          "i18n_title" : "category.thermodynamics"
+        }, {
+          "id" : 1356,
+          "i18n_title" : "category.toxicology"
+        } ],
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "some-title-2",
+        "media" : [ {
+          "id" : 39
+        } ],
+        "tag" : [ {
+          "id" : 58
+        }, {
+          "id" : 59
+        }, {
+          "id" : 60
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "article",
+      "_id" : "24",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 24,
+        "name" : "Jeszcze jeden tytul",
+        "author" : {
+          "id" : 20
+        },
+        "category" : [ {
+          "id" : 1305,
+          "i18n_title" : "category.cardiology"
+        }, {
+          "id" : 1316,
+          "i18n_title" : "category.gelotology"
+        }, {
+          "id" : 1330,
+          "i18n_title" : "category.mechanics"
+        } ],
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "jeszcze-jeden-tytul",
+        "media" : [ {
+          "id" : 39
+        } ],
+        "tag" : [ {
+          "id" : 58
+        }, {
+          "id" : 59
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "article",
+      "_id" : "21",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 21,
+        "name" : "New link 1",
+        "author" : {
+          "id" : 20
+        },
+        "category" : [ {
+          "id" : 1297,
+          "i18n_title" : "category.anthropology"
+        }, {
+          "id" : 1335,
+          "i18n_title" : "category.mineralogy"
+        }, {
+          "id" : 1348,
+          "i18n_title" : "category.physiology"
+        } ],
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "https://www.youtube.com/watch?v=5Uh6b3CDRaA",
+        "slug" : "new-link-1",
+        "media" : [ {
+          "id" : 40
+        } ],
+        "tag" : [ {
+          "id" : 58
+        }, {
+          "id" : 59
+        }, {
+          "id" : 60
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "article",
+      "_id" : "23",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 23,
+        "name" : "Litwo ojczyzno moja",
+        "author" : {
+          "id" : 20
+        },
+        "category" : [ {
+          "id" : 1297,
+          "i18n_title" : "category.anthropology"
+        }, {
+          "id" : 1331,
+          "i18n_title" : "category.medicine"
+        }, {
+          "id" : 1355,
+          "i18n_title" : "category.thermodynamics"
+        } ],
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "https://www.youtube.com/watch?v=5Uh6b3CDRaA",
+        "slug" : "litwo-ojczyzno-moja",
+        "media" : [ {
+          "id" : 40
+        } ],
+        "tag" : [ {
+          "id" : 58
+        } ],
+        "description" : null
+      }
+    } ]
+  }
+}

@@ -1,0 +1,18 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: learn_hub
+    database_user: root
+    database_password: asd
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    assets_base_url: 'http://localhost:8080'
+    mailer_delivery_address: chrusciel.piotr.87@gmail.com
+    mailer_registration_sender: chrusciel.piotr.87@gmail.com
+    mailer_registration_topic: topic
+    mailer_registration_token_secret: 2T96HNQh9sf8uh7S
+    google_api_key: AIzaSyDn59h4252y0H6bc-Kfx8oqk-WrOpwhzMI
+    secret: 4c8cd372c72ab2f4aecc70ff800e8389f888ffa6

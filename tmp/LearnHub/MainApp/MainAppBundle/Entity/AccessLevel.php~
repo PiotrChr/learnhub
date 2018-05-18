@@ -1,0 +1,40 @@
+<?php
+
+namespace LearnHub\MainApp\MainAppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="entry")
+ * */
+class AccessLevel {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * */
+    protected $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="User", mappedBy="accessLevel")
+     * */
+    protected $users;
+
+    public function __construct()
+    {
+        $this->users = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+}

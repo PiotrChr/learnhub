@@ -1,0 +1,18 @@
+#main_app:
+#    resource: "@MainAppBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+web_app:
+    resource: "@WebAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+cms:
+    resource: "@CmsBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+frontend:
+    resource: "@FrontendBundle/Resources/config/routing.yml"
+    prefix:   /
+
+backend:
+    resource: "@BackendBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,23 @@
+{% block radio_widget %}
+    {%- set type = type|default('radio') -%}
+    {%- if label is empty -%}
+        {%- if label_format is not empty -%}
+            {% set label = label_format|replace({
+            '%name%': name,
+            '%id%': id,
+            }) %}
+        {%- else -%}
+            {% set label = name|humanize %}
+        {%- endif -%}
+    {%- endif -%}
+    {%  set label = label|json_decode %}
+        <button type="button" class="btn bg-warning btn-flat margin choice-button btn-fa-bg btn-lg" rel="{{ id }}">
+
+            <input type="radio" {{ block('widget_attributes') }} value="{{ label.id }}"/>
+            {% if label.icon_type == "fa" %}
+                <i class="fa {{ label.icon }}"></i>
+            {% endif %}
+            <span>{{ label.media_type|trans({},translation_domain) }}</span>
+        </button>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'WebAppBundle:Default:layout.html.twig' %}
+
+{% form_theme addSourceForm 'WebAppBundle:Default/Form:addSource.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('assets/css/magicsuggest-min.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('assets/js/magicsuggest-min.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{ 'hub.controls.addresource'|trans|capitalize }}</h3>
+            </div>
+            <div class="box-body">
+                {{ form_start(addSourceForm) }}
+                <div class="col-sm-12">
+                    <div class="row">
+                        {{ form_label(addSourceForm.name) }}
+                    </div>
+                    <div class="row">
+                        {{ form_widget(addSourceForm.name, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="row">
+                        {{ form_label(addSourceForm.description) }}
+                    </div>
+                    <div class="row">
+                        {{ form_widget(addSourceForm.description, {'attr': {'class': 'tinymce'}}) }}
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="row">
+                        {{ form_label(addSourceForm.category) }}
+                    </div>
+                    <div class="row">
+                        {{ form_widget(addSourceForm.category, {'attr': {'class': 'form-control magicsuggestCat'}}) }}
+                    </div>
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                        <span class="help-block">{{ 'hub.addsource.bespecific'|trans|capitalize }}</span>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10 relevant-box"></div>
+                    <div class="row">
+                        {{ form_label(addSourceForm.url) }}
+                    </div>
+                    <div class="row">
+                        {{ form_widget(addSourceForm.url) }}
+                    </div>
+
+                    <div class="row">
+                        {{ form_label(addSourceForm.tag) }}
+                    </div>
+                    <div class="row">
+                        {{ form_widget(addSourceForm.tag, {'attr': {'class': 'form-control magicsuggestTag'}}) }}
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 tag-box"></div>
+                    </div>
+
+                    <div class="row">
+                        {{ form_label(addSourceForm.media) }}
+                    </div>
+
+                    <div class="row">
+                        {{ form_widget(addSourceForm.media) }}
+                    </div>
+
+
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-12">
+                    {{ form_widget(addSourceForm.add, {'attr': {'class': 'btn-success btn-flat'}}) }}
+                </div>
+
+                {{ form_end(addSourceForm) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

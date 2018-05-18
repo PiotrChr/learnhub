@@ -1,0 +1,11 @@
+{
+  "error" : {
+    "root_cause" : [ {
+      "type" : "illegal_argument_exception",
+      "reason" : "No feature for name [_saerch]"
+    } ],
+    "type" : "illegal_argument_exception",
+    "reason" : "No feature for name [_saerch]"
+  },
+  "status" : 400
+}

@@ -1,0 +1,18 @@
+{% extends 'WebAppBundle:Hub:default.html.twig' %}
+
+{% block content %}
+    {% for link in newLinks %}
+        {% set scr = link.screenShot.getValues|first %}
+        {% include 'WebAppBundle:Hub:linkItem.html.twig'
+            with {
+                'scr':scr,
+                'category':link.getCategory,
+                'topic':link.getName,
+                'url':link.getUrl,
+                'media':link.getMediaAsArray,
+                'tags':link.getTagsAsArray,
+                'slug':link.getSlug
+            }
+        %}
+    {% endfor %}
+{% endblock %}

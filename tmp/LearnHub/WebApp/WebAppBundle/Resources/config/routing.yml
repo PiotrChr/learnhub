@@ -1,0 +1,77 @@
+web_app_homepage:
+    path:     /
+    defaults: { _controller: WebAppBundle:Default:index }
+
+web_app_signin:
+    path:     /signin
+    defaults: {_controller: WebAppBundle:Login:index}
+web_app_signin.check:
+    path:     /signin_check
+    defaults: {_controller: WebAppBundle:Login:check}
+
+web_app_signup:
+    path:     /signup
+    defaults: {_controller: WebAppBundle:Registration:index}
+
+web_app_signout:
+    path:     /signout
+    defaults: {_controller: WebAppBundle:Logout:index}
+
+web_app_profile:
+    path:     /profile
+    defaults: {_controller: WebAppBundle:Profile:index}
+
+web_app_hub:
+    path:    /hub
+    defaults: {_controller: WebAppBundle:Hub:index}
+
+web_app_hub.repository.new:
+    path:    /hub/new
+    defaults: {_controller: WebAppBundle:Hub:new}
+
+web_app_hub.addSource:
+    path:    /hub/add
+    defaults: {_controller: WebAppBundle:Hub:addSource}
+
+web_app_hub.addSource.thankYou:
+    path:    /hub/add/thankYou
+    defaults: {_controller: WebAppBundle:Hub:thankYou}
+
+web_app_hub.registration.thankyou:
+    path: /signup/thankyou
+    defaults: {_controller: WebAppBundle:Registration:thankYou}
+
+web_app_hub.categories:
+    path: /hub/categories
+    defaults: {_controller: WebAppBundle:Hub:categories}
+
+web_app_hub.details:
+    path: /hub/link/{linkSlug}
+    defaults: {_controller: WebAppBundle:Hub:details}
+
+web_app_hub.registration.activate:
+    path: /signup/activate/{token}
+    defaults: {_controller: WebAppBundle:Registration:activate}
+
+avanzu_admin_profile:
+    path: /profile
+
+avanzu_admin_logout:
+    path: /signout
+
+admin_area:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+api.get.category.by.name:
+    path: /a/getCategoryByName
+    defaults: {_controller: WebAppBundle:A:getCategoryByName}
+
+api.get.tag.by.name:
+    path: /a/getTagByName
+    defaults: {_controller: WebAppBundle:A:getTagByName}
+
+api.elastic:
+    path: /a/elastic
+    defaults: {_controller: WebAppBundle:A:elastic}
+

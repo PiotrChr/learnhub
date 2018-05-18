@@ -1,0 +1,61 @@
+parameters:
+    backend.hub.grab_url_info.class: LearnHub\BackendBundle\Services\UrlInfo\UrlInfo
+    backend.hub.add_link.class: LearnHub\BackendBundle\Services\AddLink
+    backend.hub.registration.sendmail.class: LearnHub\BackendBundle\Services\SendRegistrationLink
+    backend.hub.registration.activationtoken.class: LearnHub\BackendBundle\Services\ActivationToken
+    backend.get_form_errors.class: LearnHub\BackendBundle\Services\GetFormErrors
+    backend.api.category.handler.class: LearnHub\BackendBundle\Handler\CategoryHandler
+    backend.api.tag.handler.class: LearnHub\BackendBundle\Handler\TagHandler
+    backend.elastic.class: LearnHub\BackendBundle\Services\ElasticSearch\ElasticSearch
+    backend.controller.user.class: LearnHub\BackendBundle\Controller\UserController
+
+services:
+    backend.translation.loader.db:
+          class: LearnHub\BackendBundle\Services\DBLoader
+          arguments: ['@doctrine.orm.entity_manager']
+          tags:
+              - { name: translation.loader, alias:db}
+
+    backend.hub.add_link:
+        class: '%backend.hub.add_link.class%'
+        arguments: ['@doctrine.orm.entity_manager','@backend.hub.urlinfo']
+
+    backend.hub.urlinfo:
+        class: '%backend.hub.grab_url_info.class%'
+        arguments: ['@service_container']
+
+    backend.registration.sendmail:
+        class: '%backend.hub.registration.sendmail.class%'
+        arguments: ['@twig','@service_container']
+
+    backend.registration.activationtoken:
+        class: '%backend.hub.registration.activationtoken.class%'
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@service_container'
+
+    get_form_errors:
+        class: '%backend.get_form_errors.class%'
+
+    backend.category_handler:
+        class: '%backend.api.category.handler.class%'
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - 'LearnHub\BackendBundle\Entity\Category'
+
+    backend.tag_handler:
+        class: '%backend.api.tag.handler.class%'
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - 'LearnHub\BackendBundle\Entity\Tag'
+
+    backend.elastic:
+        class: '%backend.elastic.class%'
+
+    backend.controller.user:
+        class: '%backend.controller.user.class%'
+        arguments:
+            - '@service_container'
+
+# GEDMO
+

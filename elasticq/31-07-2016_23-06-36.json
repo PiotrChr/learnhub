@@ -1,0 +1,94 @@
+{
+  "took" : 4,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 72,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "343",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.agronomy"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "349",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.bacteriology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "351",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.biology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "356",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.cosmology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "365",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.genetics"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "366",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.geochemistry"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "369",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.geology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "372",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.histology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "374",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.hydrology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "383",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.mineralogy"
+      }
+    } ]
+  }
+}

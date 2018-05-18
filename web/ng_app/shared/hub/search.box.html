@@ -1,0 +1,38 @@
+<div class="search-box search-header" click-outside="closeResults()" ng-keydown="navigate($event)">
+	<div class="col-xs-12 col-md-8 col-lg-9">
+		<input type="text" ng-model="searchPhrase" ng-keyup="search($event)" class="main-search form-control" placeholder="{{placeholder}}"/>
+	</div>
+	<div class="col-xs-12 col-md-4 col-lg-3 search-box-summary">
+		<div class="col-md-4">
+			
+		</div>
+		<div class="col-md-8">
+			<div class="sb-desc">
+				<span>
+					<span class="sb-desc-sp">Matches:</span> <strong class="pull-right">123</strong>
+				</span>
+				<span>
+					<span class="sb-desc-sp">Query time:</span> <strong class="pull-right">0.02s</strong>
+				</span>
+			</div>
+		</div>
+	</div>
+	<span class="close-results" ng-click="closeResults(true)">
+		<i class="fa fa-times"></i>
+	</span>
+
+	<div class="search-results" ng-show="opened">
+    	<ul>
+    		<li ng-repeat="result in results" ng-class="{'record-highlight': $index == focusIndex-1 }">
+    			<div class="sr-icon col-md-1">
+    				<i class="fa fa-link" ng-show="result.type == 'link'"></i>
+    				<i class="fa fa-sitemap" ng-show="result.type == 'category'"></i>
+    			</div>
+    			<div class="sr-desc col-md-11">
+    				<span class="parent">{{result.parameters.parent}}</span>
+    				<span class="name">{{result.parameters.name}}</span>
+    			</div>
+    		</li>
+    	</ul>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<?php
+
+namespace LearnHub\MainApp\MainAppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="category")
+ * */
+class Category {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="integer")
+     * */
+    protected $parentId;
+
+    /**
+     * @ORM\Column(type="string")
+     * */
+    protected $i18n_title;
+
+    /**
+     * @param $i18n_title string
+     * @param $parentId integer
+     */
+
+    public function __construct($i18n_title, $parentId)
+    {
+        $this->i18n_title = $i18n_title;
+        $this->parentId = $parentId;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParentId()
+    {
+        return $this->parentId;
+    }
+
+    /**
+     * @param mixed $parentId
+     */
+    public function setParentId($parentId)
+    {
+        $this->parentId = $parentId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getI18nTitle()
+    {
+        return $this->i18n_title;
+    }
+
+    /**
+     * @param mixed $i18n_title
+     */
+    public function setI18nTitle($i18n_title)
+    {
+        $this->i18n_title = $i18n_title;
+    }
+
+    
+}

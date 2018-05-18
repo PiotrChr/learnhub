@@ -1,0 +1,2 @@
+- Vagrant: move elastic to separate dir after install **[DONE]**
+- Configure apache host inside vagrant machine

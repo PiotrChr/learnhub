@@ -1,0 +1,113 @@
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 4,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "learnhub",
+      "_type" : "link",
+      "_id" : "22",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 22,
+        "name" : "Some title 2",
+        "author" : {
+          "id" : 20,
+          "username" : "chrusciel.piotr.87@gmail.com"
+        },
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "some-title-2",
+        "tag" : [ {
+          "id" : 58,
+          "name" : "sometag1"
+        }, {
+          "id" : 59,
+          "name" : "sometag2"
+        }, {
+          "id" : 60,
+          "name" : "sometag3"
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "link",
+      "_id" : "24",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 24,
+        "name" : "Jeszcze jeden tytul",
+        "author" : {
+          "id" : 20,
+          "username" : "chrusciel.piotr.87@gmail.com"
+        },
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "jeszcze-jeden-tytul",
+        "tag" : [ {
+          "id" : 58,
+          "name" : "sometag1"
+        }, {
+          "id" : 59,
+          "name" : "sometag2"
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "link",
+      "_id" : "21",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 21,
+        "name" : "New link 1",
+        "author" : {
+          "id" : 20,
+          "username" : "chrusciel.piotr.87@gmail.com"
+        },
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "https://www.youtube.com/watch?v=5Uh6b3CDRaA",
+        "slug" : "new-link-1",
+        "tag" : [ {
+          "id" : 58,
+          "name" : "sometag1"
+        }, {
+          "id" : 59,
+          "name" : "sometag2"
+        }, {
+          "id" : 60,
+          "name" : "sometag3"
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "link",
+      "_id" : "23",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 23,
+        "name" : "Litwo ojczyzno moja",
+        "author" : {
+          "id" : 20,
+          "username" : "chrusciel.piotr.87@gmail.com"
+        },
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "https://www.youtube.com/watch?v=5Uh6b3CDRaA",
+        "slug" : "litwo-ojczyzno-moja",
+        "tag" : [ {
+          "id" : 58,
+          "name" : "sometag1"
+        } ],
+        "description" : null
+      }
+    } ]
+  }
+}

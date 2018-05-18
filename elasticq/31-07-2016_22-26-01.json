@@ -1,0 +1,142 @@
+{
+  "took" : 7,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 348,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "learnhub",
+      "_type" : "article",
+      "_id" : "22",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 22,
+        "name" : "Some title 2",
+        "author" : {
+          "id" : 20
+        },
+        "category" : [ {
+          "id" : 1303
+        }, {
+          "id" : 1355
+        }, {
+          "id" : 1356
+        } ],
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "some-title-2",
+        "media" : [ {
+          "id" : 39
+        } ],
+        "tag" : [ {
+          "id" : 58
+        }, {
+          "id" : 59
+        }, {
+          "id" : 60
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "article",
+      "_id" : "24",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 24,
+        "name" : "Jeszcze jeden tytul",
+        "author" : {
+          "id" : 20
+        },
+        "category" : [ {
+          "id" : 1305
+        }, {
+          "id" : 1316
+        }, {
+          "id" : 1330
+        } ],
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "jeszcze-jeden-tytul",
+        "media" : [ {
+          "id" : 39
+        } ],
+        "tag" : [ {
+          "id" : 58
+        }, {
+          "id" : 59
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "14",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.cartography"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "19",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.embryology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "22",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.enzymology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "24",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.gelotology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "25",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.genetics"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "26",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.geochemistry"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "29",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.geology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "40",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.meteorology"
+      }
+    } ]
+  }
+}

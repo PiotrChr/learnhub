@@ -1,0 +1,146 @@
+@import "hub/link-items.css";
+@import "hub/search-box.css";
+
+body {
+    font-family: proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/*
+    SECTION
+    Hub:list
+*/
+
+
+
+/*
+    SECTION
+    Hub:addSource
+*/
+
+ul.categoryAutocomplete {
+    font-weight:200;
+    list-style: none;
+    display:inline-block;
+    clear:both;
+    overflow:hidden;
+}
+
+ul.categoryAutocomplete li {
+    float:left;
+}
+
+ul.categoryAutocomplete li:last-child:not(:first-child) {
+    font-weight:400;
+}
+
+ul.categoryAutocomplete li:not(:first-child):before {
+    content: '\00a0:\00a0';
+    color:cadetblue;
+    font-weight:bold;
+}
+
+/* Magic suggest override */
+div.relevant-box, div.tag-box {
+    margin-bottom:15px;
+}
+div.relevant-box .ms-sel-item, div.tag-box .ms-sel-item {
+    border:0;
+    clear:both;
+    border-radius:0;
+    color:black;
+    background:none;
+    font-size:inherit;
+    float:none;
+    padding-top:6px;
+}
+.ms-sel-item .categoryAutocomplete, .ms-sel-item .tagAutocomplete {
+    margin-top: 2px;
+    margin-bottom:0px;
+
+}
+
+.ms-res-item .categoryAutocomplete, .ms-res-item .tagAutocomplete {
+    margin: 10px 0px 0px;
+}
+.ms-sel-item:hover {
+    border:0px !important;
+    background:#fbfbfb !important;
+}
+
+.ms-res-ctn.dropdown-menu {
+    border-radius:0px;
+}
+
+span.ms-close-btn {
+    opacity:0.3;
+    background-image:none !important;
+    padding: 9px;
+    border-radius: 100%;
+    border: 2px solid gray;
+    background: gray;
+    float:left !important;
+    margin:0 !important;
+    position: relative;
+}
+span.ms-close-btn:hover {
+    opacity:0.7;
+}
+span.ms-close-btn:after {
+    font-family:FontAwesome,sans-serif;
+    content:'\f00d';
+    background-image:none !important;
+    color:white;
+    font-size: 13px;
+    top: 0;
+    left: 4px;
+    position: absolute;
+
+}
+/*
+ Admin lte override
+*/
+.btn-fa-bg input {
+    position:relative;
+    top:1px;
+}
+.btn-fa-bg {
+    position:relative;
+    overflow: hidden;
+}
+.btn-fa-bg span {
+    font-size: 15px;
+    margin-left: 5px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+}
+.btn-fa-bg i {
+    font-size: 50px;
+    right: -5px;
+    top: 5px;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+}
+.widget-user-header.bg-black {
+    background:#222d32 !important;
+}
+
+/*
+    Bootstrap override
+*/
+
+section.content {
+    padding-left:0px;
+    padding-right:0px;
+}
+
+section.content .row {
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.box, .widget-user .widget-user-header{
+    border-radius:0px;
+}

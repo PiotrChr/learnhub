@@ -1,0 +1,94 @@
+{
+  "took" : 8,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 72,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "295",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.forestry"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "300",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.geography"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "302",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.geophysics"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "313",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.metrology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "314",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.microbiology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "322",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.optics"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "332",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.seismology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "335",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.thermodynamics"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "338",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.volcanology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "340",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.quantum mechanics"
+      }
+    } ]
+  }
+}

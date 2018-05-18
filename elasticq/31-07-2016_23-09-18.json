@@ -1,0 +1,113 @@
+{
+  "took" : 4,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 72,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "learnhub",
+      "_type" : "link",
+      "_id" : "14",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 14,
+        "name" : "Some title 2",
+        "author" : {
+          "id" : 7,
+          "username" : "chrusciel.piotr.87@gmail.com"
+        },
+        "datetime" : "2016-07-31T23:09:08+02:00",
+        "url" : "http://google.com",
+        "slug" : "some-title-2",
+        "tag" : [ {
+          "id" : 19,
+          "name" : "sometag1"
+        }, {
+          "id" : 20,
+          "name" : "sometag2"
+        }, {
+          "id" : 21,
+          "name" : "sometag3"
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "415",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.astronomy"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "423",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.chemistry"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "449",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.metrology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "450",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.microbiology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "452",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.mycology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "458",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.optics"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "460",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.pathology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "468",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.seismology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "469",
+      "_score" : 1.0,
+      "_source" : {
+        "i18n_title" : "category.spectroscopy"
+      }
+    } ]
+  }
+}

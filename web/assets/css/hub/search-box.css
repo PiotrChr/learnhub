@@ -1,0 +1,115 @@
+.pre-header {
+    width:100%;
+    position:relative;
+}
+
+.pre-header  div.search-header {
+    height:50px;
+    background:rgba(26, 34, 38, 0.1);
+}
+
+div.search-header input.main-search {
+    display:block;
+    height:50px;
+    padding:10px 10px;
+    width:100%;
+    border:0;
+    background:none;
+    font-size:18px;
+    font-weight:200;
+}
+
+div.search-results {
+    clear:both;
+    position: relative;
+    max-width: 50%;
+    min-width: 100px;
+    z-index: 2;
+    background: #fbfbfb;
+    border-bottom: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    -webkit-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.08);
+    box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.08);
+    border-radius: 0 0 5px 0;
+}
+
+div.search-results ul {
+    list-style: none;
+    padding:3px 0px;
+}
+
+div.search-results ul > li {
+    padding:5px 10px;
+    cursor:pointer;
+    -webkit-transition: background 200ms ease;
+    -moz-transition: background 200ms ease;
+    -ms-transition: background 200ms ease;
+    -o-transition: background 200ms ease;
+    transition: background 200ms ease;
+    clear:both;
+    overflow:hidden;
+}
+
+div.search-results ul > li.record-highlight, div.search-results ul > li:hover {
+    background-color: #f4f4f5;
+}
+
+.sr-icon {
+    padding-left:5px;
+    width:30px;
+}
+.sr-desc {
+    padding-left:5px;
+}
+
+.sr-desc span {
+    clear:both;
+    display: block;
+}
+
+.sr-icon i {
+    position:relative;
+    top:7px;
+}
+
+.sr-desc span.parent {
+    font-size: 10px;
+    color: #a2a2a2;
+    line-height: 6px;
+    margin-top: 4px;
+}
+
+span.close-results {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    padding: 4px 10px;
+    font-size: 18px;
+    opacity: 0.4;
+    cursor: pointer;
+
+    -webkit-transition: opacity 200ms ease;
+    -moz-transition: opacity 200ms ease;
+    -ms-transition: opacity 200ms ease;
+    -o-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+}
+
+span.close-results:hover {
+    opacity:0.8;
+}
+
+.sb-desc {
+    padding:10px 4px;
+    width:110px;
+}
+
+.sb-desc > span {
+    display:block;
+    font-size:10px;
+}
+.sb-desc-sp {
+    display: inline-block;
+    min-width:55px;
+}

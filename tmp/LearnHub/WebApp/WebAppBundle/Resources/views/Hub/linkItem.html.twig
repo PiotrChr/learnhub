@@ -1,0 +1,41 @@
+<div class="box box-widget collapsed-box link-box">
+    <div class="box-header with-border">
+        <div class="user-block">
+            {#{% set media = media[0] %}#}
+            {#{% if media.getIconType == 'fa' %}#}
+                {#<i class="mediaIcon fa {{ media.getIcon }}" data-toggle="tooltip" title="{{ media.getName|trans|capitalize }}"></i>#}
+            {#{% endif %}#}
+            <img src="data:{{link.getScreenShot[0].getMime}};base64, {{ link.getScreenShot[0].getImageData }}">
+            <span class="description">
+                <span class="" data-content="{{ category.id }}">{{ category.i18nTitle|trans|capitalize }}</span>
+            </span>
+            <span class="username">
+                <a href="{{ path('web_app_hub.details',{'linkSlug':slug}) }}">{{ topic }}</a>
+            </span>
+            <span class="description">
+                <a href="{{ url }}">{{ url }}</a>
+                {% for tag in tags %}
+                        <span class="label label-default"><strong>#</strong>{{ tag.getName|trans|capitalize }}</span>
+
+                    {% endfor %}
+            </span>
+        </div>
+        <!-- /.user-block -->
+        <div class="box-tools">
+            <button data-original-title="Mark as read" type="button" class="btn btn-box-tool" data-toggle="tooltip" title="">
+                <i class="fa fa-circle-o"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+        <!-- /.box-tools -->
+    </div>
+    <!-- /.box-header -->
+    <div style="display: none;" class="box-body">
+        <p>I took this photo this morning. What do you guys think?</p>
+        <button type="button" class="btn btn-default btn-xs btn-flat"><i class="fa fa-share"></i> Share</button>
+        <button type="button" class="btn btn-default btn-xs btn-flat"><i class="fa fa-thumbs-o-up"></i> Like</button>
+        <span class="pull-right text-muted">127 likes - 3 comments</span>
+    </div>
+    <!-- /.box-body -->
+</div>

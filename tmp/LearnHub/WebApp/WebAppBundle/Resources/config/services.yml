@@ -1,0 +1,88 @@
+parameters:
+    web_app_bundle.menu_listener.class: LearnHub\WebApp\WebAppBundle\EventListener\SideMenuItemListListener
+    web_app_bundle.show_user_listener.class: LearnHub\WebApp\WebAppBundle\EventListener\ShowUserListener
+    web_app_bundle.category_type.class: LearnHub\WebApp\WebAppBundle\Form\Type\AddSourceType
+    web_app_bundle.registration_type.class: LearnHub\WebApp\WebAppBundle\Form\Type\RegistrationType
+    web_app_bundle.hub.grab_url_info.class: LearnHub\WebApp\WebAppBundle\Services\UrlInfo\UrlInfo
+    web_app_bundle.login_type.class: LearnHub\WebApp\WebAppBundle\Form\Type\LoginType
+    web_app_bundle.hub.add_link.class: LearnHub\WebApp\WebAppBundle\Services\AddLink
+    web_app_bundle.hub.registration.sendmail.class: LearnHub\WebApp\WebAppBundle\Services\SendRegistrationLink
+    web_app_bundle.hub.registration.activationtoken.class: LearnHub\WebApp\WebAppBundle\Services\ActivationToken
+
+services:
+    web_app_bundle.menu_listener:
+        class: "%web_app_bundle.menu_listener.class%"
+        arguments: ['@service_container']
+        tags:
+            - { name: kernel.event_listener, event: theme.sidebar_setup_menu, method: onSetupMenu }
+
+    web_app_bundle.show_user_listener:
+        arguments: ['@service_container']
+        class: "%web_app_bundle.show_user_listener.class%"
+        tags:
+            - { name: kernel.event_listener, event: theme.navbar_user, method: onShowUser }
+
+    web_app_bundle.category_type:
+        class: '%web_app_bundle.category_type.class%'
+        arguments: ['@doctrine.orm.default_entity_manager']
+        tags:
+            - {name: form.type}
+
+    web_app_bundle.registration_type:
+        class: '%web_app_bundle.registration_type.class%'
+        arguments: ['@service_container']
+        tags:
+            - {name: form.type}
+    web_app_bundle.login_type:
+        class: '%web_app_bundle.login_type.class%'
+        arguments: ['@doctrine.orm.default_entity_manager']
+        tags:
+            - {name: form.type}
+
+    web_app_bundle.hub.add_link:
+        class: '%web_app_bundle.hub.add_link.class%'
+        arguments: ['@doctrine.orm.default_entity_manager','@web_app_bundle.hub.urlinfo']
+
+    web_app_bundle.hub.urlinfo:
+        class: '%web_app_bundle.hub.grab_url_info.class%'
+        arguments: ['@service_container']
+
+    web_app_bundle.registration.sendmail:
+        class: '%web_app_bundle.hub.registration.sendmail.class%'
+        arguments: ['@twig','@service_container']
+
+    web_app_bundle.registration.activationtoken:
+        class: '%web_app_bundle.hub.registration.activationtoken.class%'
+        arguments: ['@doctrine.orm.default_entity_manager','@service_container']
+
+    get_form_errors:
+        class: LearnHub\WebApp\WebAppBundle\Services\GetFormErrors
+
+    security.user.provider.concrete.web_app_bundle.user_provider:
+        class: LearnHub\WebApp\WebAppBundle\Security\User\UserProvider
+        arguments: ['@doctrine.orm.default_entity_manager']
+
+    web_app_bundle.activate_user:
+        class: LearnHub\WebApp\WebAppBundle\Services\ActivateUser
+        arguments: ['@doctrine.orm.default_entity_manager']
+
+    app.twig_extension.split:
+        class: LearnHub\WebApp\WebAppBundle\Twig\SplitExtension
+        public: false
+        tags:
+            - {name: twig.extension}
+
+    app.twig_extension.json_decode:
+        class: LearnHub\WebApp\WebAppBundle\Twig\JsonDecodeExtension
+        public: false
+        tags:
+            - {name: twig.extension}
+
+    web_app_bundle.api.category.handler:
+        class: LearnHub\WebApp\WebAppBundle\Handler\CategoryHandler
+        arguments: ['@doctrine.orm.default_entity_manager','LearnHub\MainApp\MainAppBundle\Entity\Category']
+
+    web_app_bundle.api.tag.handler:
+            class: LearnHub\WebApp\WebAppBundle\Handler\TagHandler
+            arguments: ['@doctrine.orm.default_entity_manager','LearnHub\MainApp\MainAppBundle\Entity\Tag']
+# GEDMO

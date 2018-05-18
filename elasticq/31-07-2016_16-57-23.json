@@ -1,0 +1,137 @@
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 72,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "learnhub",
+      "_type" : "link",
+      "_id" : "22",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 22,
+        "name" : "Some title 2",
+        "author" : {
+          "id" : 20,
+          "username" : "chrusciel.piotr.87@gmail.com"
+        },
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "some-title-2",
+        "tag" : [ {
+          "id" : 58,
+          "name" : "sometag1"
+        }, {
+          "id" : 59,
+          "name" : "sometag2"
+        }, {
+          "id" : 60,
+          "name" : "sometag3"
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "link",
+      "_id" : "24",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 24,
+        "name" : "Jeszcze jeden tytul",
+        "author" : {
+          "id" : 20,
+          "username" : "chrusciel.piotr.87@gmail.com"
+        },
+        "datetime" : "2016-07-22T17:07:12+02:00",
+        "url" : "http://google.com",
+        "slug" : "jeszcze-jeden-tytul",
+        "tag" : [ {
+          "id" : 58,
+          "name" : "sometag1"
+        }, {
+          "id" : 59,
+          "name" : "sometag2"
+        } ],
+        "description" : null
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1305",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1305,
+        "i18n_title" : "category.cardiology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1307",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1307,
+        "i18n_title" : "category.chemistry"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1309",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1309,
+        "i18n_title" : "category.crystallography"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1313",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1313,
+        "i18n_title" : "category.entomology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1314",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1314,
+        "i18n_title" : "category.enzymology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1315",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1315,
+        "i18n_title" : "category.forestry"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1316",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1316,
+        "i18n_title" : "category.gelotology"
+      }
+    }, {
+      "_index" : "learnhub",
+      "_type" : "category",
+      "_id" : "1320",
+      "_score" : 1.0,
+      "_source" : {
+        "id" : 1320,
+        "i18n_title" : "category.geography"
+      }
+    } ]
+  }
+}

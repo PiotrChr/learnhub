@@ -1,0 +1,109 @@
+<?php
+
+namespace LearnHub\MainApp\MainAppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use LearnHub\MainApp\MainAppBundle\Entity\Category;
+
+/**
+ * @ORM\Entity()
+ * @ORM\Table(name="link")
+ * */
+class Link {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * */
+    protected $id;
+
+    /**
+     * @var $url
+     * @ORM\Column(type="text")
+     * */
+    protected $url;
+
+    /**
+     * @var $category
+     *
+     * @ORM\ManyToMany(targetEntity="LearnHub\MainApp\MainAppBundle\Entity\Category")
+     * @ORM\JoinTable(name="link_categories",
+     *      joinColumns={@ORM\JoinColumn(name="link_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="category_id", referencedColumnName="id")}
+     *      )
+     */
+    
+    protected $category;
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->category = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory(Category $category)
+    {
+        $this->category->clear();
+        $this->category->add($category);
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function addCategory(Category $category) {
+        $this->category->add($category);
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param mixed $url
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+
+
+    /**
+     * Remove category
+     *
+     * @param \LearnHub\MainApp\MainAppBundle\Entity\Category $category
+     */
+    public function removeCategory(Category $category)
+    {
+        $this->category->removeElement($category);
+    }
+}
