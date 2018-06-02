@@ -20,12 +20,6 @@ framework:
         strict_requirements: ~
     form:            ~
     csrf_protection: ~
-<<<<<<< HEAD
-    validation:      { enable_annotations: true, enable_annotations: true }
-    #serializer:      { enable_annotations: true }
-    templating:
-        engines: ['twig']
-=======
     validation:      { enable_annotations: true }
     serializer:
         { enabled : true }
@@ -33,10 +27,8 @@ framework:
     templating:
         engines: ['twig']
         #assets_version: SomeVersionScheme
->>>>>>> remotes/origin/React&Redux_integration
     default_locale:  "%locale%"
     trusted_hosts:   ~
-    trusted_proxies: ~
     session:
         # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
         handler_id:  session.handler.native_file
@@ -74,33 +66,11 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-# Swiftmailer Configuration
-swiftmailer:
-    transport: "%mailer_transport%"
-    host:      "%mailer_host%"
-    username:  "%mailer_user%"
-    password:  "%mailer_password%"
-    delivery_address: "%mailer_delivery_address%"
-    disable_delivery: false
-    spool:     { type: memory }
-assetic:
-    debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
-    filters:
-        cssrewrite: ~
-gregwar_captcha: ~
-sonata_block:
-    default_contexts: [cms]
-    blocks:
-        sonata.admin.block.admin_list:
-            contexts: [admin]
 stof_doctrine_extensions:
     orm:
         default:
             tree: true
             sluggable: true
-jms_security_extra:
-    expressions: true
 
 fos_elastica:
     clients:
@@ -111,7 +81,7 @@ fos_elastica:
             client: default
             types:
                 link:
-                    mappings:
+                    properties:
                         id: ~
                         name: { boost: 5}
                         author:
@@ -135,7 +105,7 @@ fos_elastica:
                         provider: ~
                         listener: ~
                 category:
-                    mappings:
+                    properties:
                         i18n_title: {boost: 5}
                     persistence:
                         driver: orm
@@ -143,7 +113,6 @@ fos_elastica:
                         finder: ~
                         provider: ~
                         listener: ~
-    spool:     { type: memory }
 
 # These are the default configuration options for the React Bundle
 limenius_react:

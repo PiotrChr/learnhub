@@ -1,9 +1,8 @@
 <?php
-namespace LearnHub\BackendBundle\Services\UrlInfo;
+namespace BackendBundle\Services\UrlInfo;
 
-use LearnHub\BackendBundle\Entity\ScreenShot;
-use LearnHub\BackendBundle\Model\PageScreenShotModel;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use BackendBundle\Entity\ScreenShot;
+use BackendBundle\Model\PageScreenShotModel;
 
 class GrabYoutubeApiData implements UrlInfoGrabberInterface {
     private $googleApiKey;

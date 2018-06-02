@@ -4,16 +4,16 @@ security:
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     access_control:
-      - { path: ^/profile, access: "isAuthenticated()"}
+      - { path: ^/profile, methods: ["isAuthenticated()"]}
     providers:
         user_database:
             entity:
-                class: 'MainAppBundle:User'
+                class: 'BackendBundle:User'
                 property: username
         in_memory:
             memory: ~
     encoders:
-        LearnHub\MainApp\MainAppBundle\Entity\User:
+        BackendBundle\Entity\User:
             algorithm: bcrypt
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -23,9 +23,8 @@ security:
         main:
             anonymous: ~
             guard:
-                provider: web_app_bundle.user_provider
-                authenticators:
-                    - app.form_login_authenticator
+                entry_point: BackendBundle\Security\FormLoginAuthenticator
+                provider: user_database
             logout:
                 path: web_app_signout
                 target: web_app_homepage

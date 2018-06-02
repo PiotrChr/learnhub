@@ -1,9 +1,9 @@
 <?php
-namespace LearnHub\BackendBundle\Services;
+namespace BackendBundle\Services;
 
 use Doctrine\ORM\EntityManager;
-use LearnHub\BackendBundle\Entity\Link;
-use LearnHub\BackendBundle\Services\UrlInfo\UrlInfo;
+use BackendBundle\Entity\Link;
+use BackendBundle\Services\UrlInfo\UrlInfo;
 
 class AddLink {
 
@@ -16,6 +16,7 @@ class AddLink {
     }
 
     public function add(Link $link) {
+        // FIXME: Add eror handling
         $link->setDatetime(new \DateTime('now'));
         $this->em->persist($link);
         $this->em->flush();

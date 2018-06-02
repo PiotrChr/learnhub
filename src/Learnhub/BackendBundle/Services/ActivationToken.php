@@ -1,8 +1,8 @@
 <?php
-namespace LearnHub\BackendBundle\Services;
+namespace BackendBundle\Services;
 
 use Doctrine\ORM\EntityManager;
-use LearnHub\BackendBundle\Entity\User;
+use BackendBundle\Entity\User;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class ActivationToken {

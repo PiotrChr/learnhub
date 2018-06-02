@@ -1,5 +1,5 @@
 <?php
-namespace LearnHub\BackendBundle\Security\User;
+namespace BackendBundle\Security\User;
 
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Security\Core\User\UserInterface;

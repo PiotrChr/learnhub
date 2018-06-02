@@ -1,12 +1,13 @@
 <?php
-namespace LearnHub\BackendBundle\Security;
+namespace BackendBundle\Security;
 
-use LearnHub\BackendBundle\Entity\User;
-use LearnHub\BackendBundle\Exceptions\AccountInactiveException;
-use LearnHub\BackendBundle\Model\Login;
+use BackendBundle\Entity\User;
+use BackendBundle\Exceptions\AccountInactiveException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
@@ -26,9 +27,21 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator {
     public function __construct(RouterInterface $router, UserPasswordEncoderInterface $encoder, $path, RequestStack $request) {
         $this->router = $router;
         $this->encoder = $encoder;
+        // FIXME: rename this variable, nobody knows what it means
         $this->path = $path;
         $this->request = $request;
     }
+
+    public function supports(Request $request)
+    {
+        // TODO: Implement supports() method.
+    }
+
+    public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
+    {
+        // TODO: Implement onAuthenticationSuccess() method.
+    }
+
 
     protected function getLoginUrl()
     {
@@ -43,7 +56,7 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator {
     public function getCredentials(Request $request)
     {
         if ($request->getPathInfo() != $this->path) {
-            return;
+            return null;
         }
 
         $loginRequest = $request->request->get('login');
@@ -52,6 +65,7 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator {
 
         $request->getSession()->set(Security::LAST_USERNAME, $username);
 
+        // FIXME: return entity
         return [
             'username' => $username,
             'password' => $password,
@@ -73,6 +87,7 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator {
             /** @var $user User **/
             if ($user->getIsActive()) {
                 // Set user details in session
+                // FIXME: Add a proper entity here
                 $login = new Login();
                 $login->setUsername($user->getUsername());
 

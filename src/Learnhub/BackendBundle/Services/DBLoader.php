@@ -1,8 +1,8 @@
 <?php
-namespace LearnHub\BackendBundle\Services;
+namespace BackendBundle\Services;
 
 use Symfony\Component\Translation\MessageCatalogue;
-use LearnHub\BackendBundle\Entity\LanguageTranslation;
+use BackendBundle\Entity\LanguageTranslation;
 use Symfony\Component\Translation\Loader\LoaderInterface;
 use Doctrine\ORM\EntityManager;
 
@@ -18,6 +18,7 @@ class DBLoader implements LoaderInterface{
 
     function load($resource, $locale, $domain = 'messages'){
         //Load on the db for the specified local
+        // fIXME: exeption handling
         $language = $this->languageRepository->getLanguage($locale);
 
         $translations = $this->transaltionRepository->getTranslations($language, $domain);

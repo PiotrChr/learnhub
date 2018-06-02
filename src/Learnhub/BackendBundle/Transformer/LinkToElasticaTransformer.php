@@ -9,7 +9,7 @@ namespace LearnHub\BackendBundle\Transformer;
 
 use Elastica\Document;
 use FOS\ElasticaBundle\Transformer\ModelToElasticaAutoTransformer;
-use LearnHub\BackendBundle\Entity\Link;
+use BackendBundle\Entity\Link;
 
 class LinkToElasticaTransformer extends ModelToElasticaAutoTransformer {
 

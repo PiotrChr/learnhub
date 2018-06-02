@@ -1,5 +1,5 @@
 mysqlPassword="asd"
-phpVer="php7.0"
+phpVer="php7.2"
 sources="setup/sources/"
 syncFolder="/srv/www/"
 server=$syncFolder"server/"

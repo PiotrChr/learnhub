@@ -1,5 +1,5 @@
 <?php
-namespace LearnHub\BackendBundle\Repository;
+namespace BackendBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Gedmo\Tree\Entity\Repository\NestedTreeRepository;
