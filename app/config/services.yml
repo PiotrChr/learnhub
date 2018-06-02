@@ -6,14 +6,3 @@ parameters:
 #    parameter_name: value
 
 services:
-    app.form_login_authenticator:
-        class: LearnHub\WebApp\WebAppBundle\Security\FormLoginAuthenticator
-        arguments: ["@router", "@security.password_encoder", "%login_check_path%",'@request_stack']
-    app.translation.loader.db:
-        class: LearnHub\MainApp\MainAppBundle\Services\DBLoader
-        arguments: ['@doctrine.orm.default_entity_manager']
-        tags:
-            - { name: translation.loader, alias:db}
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

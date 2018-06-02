@@ -1,5 +1,5 @@
 <?php
-namespace LearnHub\BackendBundle\Services;
+namespace BackendBundle\Services;
 
 use Symfony\Component\Form\Form;
 

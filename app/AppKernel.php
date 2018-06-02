@@ -3,6 +3,8 @@
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
+use FOS\ElasticaBundle\FOSElasticaBundle;
+
 class AppKernel extends Kernel
 {
     public function registerBundles()
@@ -12,22 +14,14 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new LearnHub\Cms\CmsBundle\CmsBundle(),
-            new LearnHub\WebApp\WebAppBundle\WebAppBundle(),
-            new LearnHub\MainApp\MainAppBundle\MainAppBundle(),
             new \Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle(),
             new \Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new \FOS\RestBundle\FOSRestBundle(),
             new \JMS\SerializerBundle\JMSSerializerBundle(),
-            new \JMS\AopBundle\JMSAopBundle(),
-            new \JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new \JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new \Nelmio\ApiDocBundle\NelmioApiDocBundle(),
-            new \FOS\ElasticaBundle\FOSElasticaBundle(),
+            new FOSElasticaBundle(),
             new Limenius\ReactBundle\LimeniusReactBundle(),
             new BackendBundle\BackendBundle(),
             new FrontendBundle\FrontendBundle()
@@ -36,8 +30,6 @@ class AppKernel extends Kernel
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
         }
 

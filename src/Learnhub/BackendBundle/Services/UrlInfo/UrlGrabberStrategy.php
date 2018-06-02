@@ -1,7 +1,7 @@
 <?php
-namespace LearnHub\BackendBundle\Services\UrlInfo;
+namespace BackendBundle\Services\UrlInfo;
 
-use LearnHub\BackendBundle\Services\UrlInfo\GrabGoogleApiData;
+use BackendBundle\Services\UrlInfo\GrabGoogleApiData;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class UrlGrabberStrategy {

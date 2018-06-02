@@ -1,5 +1,5 @@
 <?php
-namespace LearnHub\BackendBundle\Repository\SearchRepository;
+namespace BackendBundle\Repository\SearchRepository;
 
 
 use Elastica\Query\BoolQuery;
@@ -11,7 +11,7 @@ use Elastica\Query\QueryString;
 use Elastica\Query\Term;
 use Elastica\QueryBuilder\DSL\Query;
 use FOS\ElasticaBundle\Repository;
-use LearnHub\BackendBundle\Model\LinkSearch;
+use BackendBundle\Model\LinkSearch;
 
 class LinkRepository extends Repository {
     

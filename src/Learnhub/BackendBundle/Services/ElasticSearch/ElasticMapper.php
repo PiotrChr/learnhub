@@ -1,9 +1,9 @@
 <?php
 
-namespace LearnHub\BackendBundle\Services\ElasticSearch;
+namespace BackendBundle\Services\ElasticSearch;
 
-use LearnHub\BackendBundle\Entity\Category;
-use LearnHub\BackendBundle\Entity\Link;
+use BackendBundle\Entity\Category;
+use BackendBundle\Entity\Link;
 
 class ElasticMapper {
 

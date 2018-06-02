@@ -1,7 +1,7 @@
 <?php
-namespace LearnHub\BackendBundle\Services\UrlInfo;
+namespace BackendBundle\Services\UrlInfo;
 
-use LearnHub\BackendBundle\Model\UrlInfoModel;
+use BackendBundle\Model\UrlInfoModel;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class UrlInfo {

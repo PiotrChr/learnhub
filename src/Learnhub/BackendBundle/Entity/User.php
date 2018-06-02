@@ -3,7 +3,6 @@
 namespace BackendBundle\Entity;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use Avanzu\AdminThemeBundle\Model\UserInterface as AvancuUserInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraint as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -16,7 +15,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *     message="This username is already taken"
  * )
  * */
-class User implements UserInterface, AvancuUserInterface {
+class User implements UserInterface {
 
     /**
      * @ORM\Id

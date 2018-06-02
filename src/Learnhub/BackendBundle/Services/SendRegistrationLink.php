@@ -1,7 +1,7 @@
 <?php
-namespace LearnHub\BackendBundle\Services;
+namespace BackendBundle\Services;
 
-use LearnHub\BackendBundle\Entity\User;
+use BackendBundle\Entity\User;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class SendRegistrationLink {
@@ -37,6 +37,7 @@ class SendRegistrationLink {
         $username = $this->user->getUsername();
         $activationUrl = $this->container->get('backend.registration.activationtoken')->createToken($this->user);
 
+        // FIXME: undefined dependency
         $transporter = \Swift_SmtpTransport::newInstance('smtp.gmail.com',465,'ssl')
             ->setUsername('chrusciel.piotr.87@gmail.com')
             ->setPassword('pztnrv6y');

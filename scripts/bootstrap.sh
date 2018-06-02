@@ -2,7 +2,7 @@
 
 timestamp=$( date +%d-%m-%Y_%H-%M-%S )
 
-elasticDir="/var/www/SymfonyTest/elasticq/"
+elasticDir="/srv/www/elasticq/"
 elasticOutput="$elasticDir$timestamp.json"
 
 bold=$(tput bold)

@@ -21,3 +21,4 @@
 /web/bower_components
 .idea/*
 .vagrant/*
+/node_modules

@@ -1,8 +1,8 @@
 <?php
-namespace LearnHub\BackendBundle\Services\ElasticSearch;
+namespace BackendBundle\Services\ElasticSearch;
 
 use FOS\ElasticaBundle\Finder\TransformedFinder;
-use LearnHub\BackendBundle\Decorators\MicroTimeDecorator;
+use BackendBundle\Decorators\MicroTimeDecorator;
 
 class ElasticSearch {
 

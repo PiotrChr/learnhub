@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "10.1.1.33"
 
     # Enabling NFS for better performance with Symfony.
-    config.vm.synced_folder "./", "/srv/www/", id: "vagrant-root", owner: "www-data", group: "www-data"
+    config.vm.synced_folder "./", "/srv/www/", id: "vagrant-root", owner: "vagrant", group: "vagrant"
 
     # SSH configuration
     config.ssh.forward_agent = true
@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
         # Name of the base box.
         config.vm.box = "ubuntu/trusty64"
 
-        virtualbox.memory = 2048
+        virtualbox.memory = 4096
         virtualbox.cpus = 2
     end
 
@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
     config.vm.provider "parallels" do |parallels, config_override|
         config_override.vm.box = "parallels/ubuntu-14.04"
 
-        parallels.memory = 2048
+        parallels.memory = 4096
         parallels.cpus = 2
     end
 

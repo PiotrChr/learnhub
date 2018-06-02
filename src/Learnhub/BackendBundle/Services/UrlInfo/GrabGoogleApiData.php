@@ -1,9 +1,9 @@
 <?php
-namespace LearnHub\BackendBundle\Services\UrlInfo;
+namespace BackendBundle\Services\UrlInfo;
 
-use LearnHub\BackendBundle\Entity\ScreenShot;
-use LearnHub\BackendBundle\Model\PageScreenShotModel as PageScreenShot;
-use LearnHub\BackendBundle\Services\UrlInfo\UrlInfoGrabberInterface;
+use BackendBundle\Entity\ScreenShot;
+use BackendBundle\Model\PageScreenShotModel as PageScreenShot;
+use BackendBundle\Services\UrlInfo\UrlInfoGrabberInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class GrabGoogleApiData implements UrlInfoGrabberInterface {

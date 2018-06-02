@@ -1,6 +1,6 @@
 <?php
 
-namespace LearnHub\BackendBundle\Repository;
+namespace BackendBundle\Repository;
 
 /**
  * ImageRepository

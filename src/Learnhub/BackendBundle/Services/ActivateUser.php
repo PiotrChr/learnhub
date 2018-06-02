@@ -1,5 +1,5 @@
 <?php
-namespace LearnHub\BackendBundle\Services;
+namespace BackendBundle\Services;
 
 use Doctrine\ORM\EntityManager;
 
@@ -29,6 +29,7 @@ class ActivateUser {
         $user->setActivationToken(null);
         $user->setIsActive(true);
 
+        // FIXME: Add error handling
         $this->em->persist($user);
         $this->em->flush();
 

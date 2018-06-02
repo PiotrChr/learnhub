@@ -20,6 +20,7 @@ sudo apt install php libapache2-mod-php
 sudo apt-get -y install ${phpVer}-mysql
 sudo apt-get -y install php-gettext
 sudo apt-get -y install ${phpVer}-mbstring
+sudo apt-get -y install ${phpVer}-gd
 sudo apt-get -y install ${phpVer}-xsl
 sudo apt-get -y install ${phpVer}-xmlrpc
 sudo apt-get -y install ${phpVer}-tidy

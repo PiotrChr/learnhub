@@ -1,9 +1,9 @@
 <?php
 
-namespace LearnHub\BackendBundle\Security;
+namespace BackendBundle\Security;
 
-use LearnHub\BackendBundle\Entity\User;
-use LearnHub\BackendBundle\Security\User\UserProvider;
+use BackendBundle\Entity\User;
+use BackendBundle\Security\User\UserProvider;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\PreAuthenticatedToken;

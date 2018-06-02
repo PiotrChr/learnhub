@@ -1,5 +1,5 @@
-#!/bin/sh
-. /var/www/SymfonyTest/scripts/bootstrap.sh
+#!/bin/bash
+. /srv/www/scripts/bootstrap.sh
 
 mkdir -p $elasticDir
 jsonQuery="{'query':{'term':{'name':'link'}} }"
